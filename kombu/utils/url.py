@@ -87,6 +87,7 @@ def sanitize_url(url, mask='**'):
 
 def maybe_sanitize_url(url, mask='**'):
     # type: (Any, str) -> Any
+    return url
     """Sanitize url, or do nothing if url undefined."""
     if isinstance(url, string_t) and '://' in url:
         return sanitize_url(url, mask)
